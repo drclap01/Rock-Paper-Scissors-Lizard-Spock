@@ -24,6 +24,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         paperImage.setOnClickListener(this);
         ImageView scissorsImage = (ImageView)findViewById(R.id.btnScissors);
         scissorsImage.setOnClickListener(this);
+        ImageView lizardImage = (ImageView)findViewById(R.id.btnLizard);
+        lizardImage.setOnClickListener(this);
+        ImageView spockImage = (ImageView)findViewById(R.id.btnSpock);
+        spockImage.setOnClickListener(this);
     }
 
     @Override
