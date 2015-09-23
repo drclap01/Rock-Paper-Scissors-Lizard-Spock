@@ -3,7 +3,8 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -28,5 +29,21 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnPaper"
         android:id="@+id/btnScissors"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/lizard"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/btnPaper"
+        android:id="@+id/btnLizard"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/spock"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/btnPaper"
+        android:id="@+id/btnSpock"/>
 
 </RelativeLayout>
