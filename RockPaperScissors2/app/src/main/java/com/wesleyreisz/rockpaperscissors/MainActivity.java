@@ -11,7 +11,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    public static final String CHOICE = "com.wesleyreisz.rockpaperscissors.choice";
+    public static final String EXTRA = "com.wesleyreisz.rockpaperscissors.choice";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,9 +54,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        System.out.println(v.getId());
         Log.d("Test", "I was clicked");
-        Intent intent = new Intent(this,ResultsActivity.class);
-        intent.putExtra(CHOICE, v.getId());
+        Intent intent = new Intent(this, ResultsActivity.class);
+        intent.putExtra("choice", v.getId());
         startActivity(intent);
     }
 }
