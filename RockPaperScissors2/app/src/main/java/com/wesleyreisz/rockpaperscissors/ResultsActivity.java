@@ -47,17 +47,19 @@ public class ResultsActivity extends AppCompatActivity {
         String compChoice = compChoice();
 
         winningText = compare(choiceStr, compChoice);
+        Log.d("Player Choice", choiceStr);
+        Log.d("Comp Choice", compChoice);
         Toast.makeText(ResultsActivity.this, winningText, Toast.LENGTH_SHORT).show();
 
     }
 
     public String compChoice() {
         Random rand = new Random();
-        Integer compChoice = rand.nextInt(5);
+        Integer compChoice = rand.nextInt(5) + 1;
 
         String compChoiceStr = "";
 
-        if (compChoice == 0) {
+        if (compChoice == 5) {
             compChoiceStr = "R";
         }
         else if (compChoice == 1){
@@ -160,6 +162,26 @@ public class ResultsActivity extends AppCompatActivity {
 
         else if (choiceStr == "Sc" && compChoice == "R") {
             winningText = "Player Loses";
+        }
+
+        else if (choiceStr == "Sc" && compChoice == "Sc") {
+            winningText = "Draw";
+        }
+
+        else if (choiceStr == "R" && compChoice == "R") {
+            winningText = "Draw";
+        }
+
+        else if (choiceStr == "L" && compChoice == "L") {
+            winningText = "Draw";
+        }
+
+        else if (choiceStr == "P" && compChoice == "P") {
+            winningText = "Draw";
+        }
+
+        else if (choiceStr == "Sp" && compChoice == "Sp") {
+            winningText = "Draw";
         }
 
         return winningText;
