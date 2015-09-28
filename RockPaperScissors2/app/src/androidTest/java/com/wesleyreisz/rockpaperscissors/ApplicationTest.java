@@ -63,7 +63,7 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
     }
 
     public void testLizard(){
-        Integer player = R.id.btnPaper;
+        Integer player = R.id.btnLizard;
 
         Assert.assertEquals(GameUtils.TIES,GameUtils.evaluateWinner(player,R.id.btnLizard));
         Assert.assertEquals(GameUtils.LOSES_TO,GameUtils.evaluateWinner(player, R.id.btnScissors));
